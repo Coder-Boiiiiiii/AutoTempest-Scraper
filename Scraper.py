@@ -2,9 +2,6 @@ import subprocess
 import sys
 import re
 import logging
-import pandas as pd
-import folium
-import googlemaps
 
 # List of libraries to check and install if not available
 libraries = ['selenium', 'beautifulsoup4', 'webdriver-manager', 'pandas', 'openpyxl']
@@ -26,6 +23,7 @@ try:
     from selenium.webdriver.support import expected_conditions as EC
     from bs4 import BeautifulSoup
     from webdriver_manager.chrome import ChromeDriverManager
+    import pandas as pd
 except ImportError as e:
     print(f"Error importing necessary libraries: {e}")
     sys.exit(1)
